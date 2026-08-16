@@ -216,26 +216,9 @@
   .ring.r3{inset:-70px;border:1px solid rgba(31,64,55,.09);}
   @keyframes spin{to{transform:rotate(360deg);}}
 
-  .mono-badge{
-    width:100%;height:100%;border-radius:50%;position:relative;
-    background:
-      radial-gradient(circle at 32% 28%,rgba(204,154,92,.16),transparent 55%),
-      linear-gradient(150deg,var(--verde) 0%,var(--verde-oscuro) 100%);
-    border:1px solid var(--dorado);
-    box-shadow:0 26px 70px rgba(31,64,55,.28), inset 0 0 0 6px rgba(251,248,240,.05);
-    display:flex;flex-direction:column;align-items:center;justify-content:center;
-    overflow:hidden;
-  }
-  .mono-badge::before{
-    content:'';position:absolute;inset:14px;border:1px solid rgba(204,154,92,.35);border-radius:50%;
-  }
-  .mono-badge .mono-letters{
-    font-family:'Playfair Display',serif;font-style:italic;font-weight:500;
-    font-size:clamp(3.4rem,11vw,4.6rem);color:var(--dorado-luz);line-height:1;letter-spacing:.01em;
-  }
-  .mono-badge .mono-rule{width:46px;height:1px;background:var(--dorado);margin:.9rem 0 .8rem;}
-  .mono-badge .mono-sub{
-    font-family:'Lato',sans-serif;font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--crema-2);
+  .medallion img{
+    width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 30%;
+    border:1px solid var(--dorado);box-shadow:0 26px 70px rgba(31,64,55,.28), inset 0 0 0 6px rgba(251,248,240,.4);
   }
 
   .chip{
@@ -307,29 +290,12 @@
   .about-fig{position:relative;}
   .about-fig .plate{
     position:relative;border-radius:220px 220px 8px 8px;overflow:hidden;aspect-ratio:3/4;
-    box-shadow:0 30px 70px rgba(31,64,55,.2);
-    background:
-      radial-gradient(circle at 50% 30%,rgba(204,154,92,.14),transparent 55%),
-      linear-gradient(165deg,var(--verde) 0%,var(--verde-oscuro) 100%);
-    display:flex;flex-direction:column;align-items:center;justify-content:center;
-    padding:2rem;
+    box-shadow:0 30px 70px rgba(31,64,55,.2);background:var(--crema-3);
   }
+  .about-fig .plate img{width:100%;height:100%;object-fit:cover;object-position:center 12%;display:block;}
   .about-fig .plate::before{
-    content:'';position:absolute;inset:16px;border:1px solid rgba(204,154,92,.3);
+    content:'';position:absolute;inset:16px;border:1px solid rgba(251,248,240,.55);
     border-radius:200px 200px 8px 8px;pointer-events:none;
-  }
-  .plate-icon{width:34%;max-width:120px;color:var(--dorado);margin-bottom:1.6rem;}
-  .plate-icon [pathLength]{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.6s var(--ease);}
-  .about-fig.in .plate-icon [pathLength]{stroke-dashoffset:0;}
-  .about-fig.in .plate-icon [pathLength]:nth-child(2){transition-delay:.2s}
-  .about-fig.in .plate-icon [pathLength]:nth-child(3){transition-delay:.4s}
-  .plate-name{
-    font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.7rem,3.4vw,2.3rem);
-    color:var(--crema-2);text-align:center;line-height:1.25;
-  }
-  .plate-rule{width:40px;height:1px;background:var(--dorado);margin:1.1rem 0;}
-  .plate-sub{
-    font-family:'Lato',sans-serif;font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--dorado-luz);
   }
   .about-fig .frame-line{position:absolute;inset:-18px;border:1px solid var(--linea);
     border-radius:230px 230px 10px 10px;pointer-events:none;}
@@ -552,11 +518,7 @@
     <div class="hero-visual">
       <div class="medallion">
         <div class="ring r3"></div><div class="ring r2"></div><div class="ring r1"></div>
-        <div class="mono-badge">
-          <span class="mono-letters">VC</span>
-          <span class="mono-rule"></span>
-          <span class="mono-sub">Abogada</span>
-        </div>
+        <img src="valeria-hero.jpg" alt="Valeria Córsico Piccolini">
         <span class="chip c1">Sucesiones</span>
         <span class="chip c2">Divorcios</span>
         <span class="chip c3">Usucapión</span>
@@ -628,16 +590,7 @@
     <div class="about-fig reveal">
       <div class="frame-line"></div>
       <div class="plate">
-        <svg class="plate-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">
-          <path pathLength="1" d="M24 6v34M15 40h18"/>
-          <path pathLength="1" d="M8 13h32M24 6l-7 7M24 6l7 7"/>
-          <path pathLength="1" d="M8 13 3 24h10zM40 13l-5 11h10z"/>
-          <circle pathLength="1" cx="8" cy="16.5" r="1.4" fill="currentColor" stroke="none"/>
-          <circle pathLength="1" cx="40" cy="16.5" r="1.4" fill="currentColor" stroke="none"/>
-        </svg>
-        <span class="plate-name">Valeria<br>Córsico</span>
-        <span class="plate-rule"></span>
-        <span class="plate-sub">Abogada · Córdoba</span>
+        <img src="valeria-sobre-mi.jpg" alt="Valeria Córsico Piccolini">
       </div>
       <div class="about-badge"><b>MP 1-29903</b><i>Matrícula</i></div>
     </div>
